@@ -1,0 +1,52 @@
+
+Gurobi 11.0.3 (linux64) logging started Mon 18 Nov 2024 10:37:00 PM CST
+
+Set parameter LogFile to value "/home/dlcole3/graph_abstraction/hierarchical_graphs/git_storage/CS1/HP_low_reserves/gurobi_logs/serial/logfile_ST18_5.log"
+
+Gurobi 11.0.3 (linux64) logging started Mon 18 Nov 2024 10:53:35 PM CST
+
+Set parameter LogFile to value "/home/dlcole3/graph_abstraction/hierarchical_graphs/git_storage/CS1/HP_low_reserves/gurobi_logs/serial/logfile_ST18_5.log"
+Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (linux64 - "Ubuntu 18.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 40 physical cores, 80 logical processors, using up to 20 threads
+
+Optimize a model with 29168 rows, 50688 columns and 136175 nonzeros
+Model fingerprint: 0xe134751c
+Variable types: 46944 continuous, 3744 integer (3744 binary)
+Coefficient statistics:
+  Matrix range     [6e-01, 2e+04]
+  Objective range  [2e+00, 2e+04]
+  Bounds range     [5e-02, 2e+05]
+  RHS range        [3e-02, 7e+03]
+Presolve removed 14071 rows and 38549 columns
+Presolve time: 0.34s
+Presolved: 15097 rows, 12139 columns, 64115 nonzeros
+Variable types: 9144 continuous, 2995 integer (2995 binary)
+Found heuristic solution: objective 179661.00999
+Found heuristic solution: objective 175203.71625
+Found heuristic solution: objective 149161.74491
+
+Root relaxation: objective 4.264356e+04, 8530 iterations, 0.39 seconds (0.29 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 42643.5562    0   19 149161.745 42643.5562  71.4%     -    1s
+H    0     0                    149129.53390 42643.5562  71.4%     -    1s
+H    0     0                    65876.315764 42643.5562  35.3%     -    1s
+     0     0 42643.5562    0   19 65876.3158 42643.5562  35.3%     -    1s
+     0     2 42643.5562    0   19 65876.3158 42643.5562  35.3%     -    2s
+H   34    52                    65876.315739 42643.6249  35.3%  25.2    2s
+H   41    52                    44382.224969 42643.6249  3.92%  22.5    2s
+H   91    70                    42789.796514 42643.6249  0.34%  23.8    2s
+
+Explored 177 nodes (11863 simplex iterations) in 2.87 seconds (1.99 work units)
+Thread count was 20 (of 80 available processors)
+
+Solution count 7: 42789.8 44382.2 65876.3 ... 179661
+
+Optimal solution found (tolerance 3.00e-03)
+Best objective 4.278979651453e+04, best bound 4.278116380074e+04, gap 0.0202%
+
+User-callback calls 1880, time in user-callback 0.00 sec

@@ -1,0 +1,48 @@
+
+Gurobi 11.0.3 (linux64) logging started Mon 18 Nov 2024 06:56:52 PM CST
+
+Set parameter LogFile to value "/home/dlcole3/graph_abstraction/hierarchical_graphs/git_storage/CS1/HP_low_reserves/gurobi_logs/serial/logfile_ST1_2.log"
+Set parameter TimeLimit to value 300
+
+Gurobi 11.0.3 (linux64) logging started Mon 18 Nov 2024 06:58:13 PM CST
+
+Set parameter LogFile to value "/home/dlcole3/graph_abstraction/hierarchical_graphs/git_storage/CS1/HP_low_reserves/gurobi_logs/serial/logfile_ST1_2.log"
+Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (linux64 - "Ubuntu 18.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 40 physical cores, 80 logical processors, using up to 32 threads
+
+Optimize a model with 29168 rows, 50688 columns and 136175 nonzeros
+Model fingerprint: 0xf44212c1
+Variable types: 46944 continuous, 3744 integer (3744 binary)
+Coefficient statistics:
+  Matrix range     [6e-01, 2e+04]
+  Objective range  [2e+00, 2e+04]
+  Bounds range     [5e-02, 2e+05]
+  RHS range        [5e-02, 7e+03]
+Presolve removed 15025 rows and 39346 columns
+Presolve time: 0.32s
+Presolved: 14143 rows, 11342 columns, 60024 nonzeros
+Variable types: 8458 continuous, 2884 integer (2884 binary)
+Found heuristic solution: objective 162220.70224
+Found heuristic solution: objective 153577.91754
+Found heuristic solution: objective 123466.81868
+
+Root relaxation: objective 1.076896e+04, 7999 iterations, 0.29 seconds (0.20 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 10768.9636    0    5 123466.819 10768.9636  91.3%     -    1s
+H    0     0                    123462.41766 10768.9636  91.3%     -    1s
+H    0     0                    10771.507174 10768.9636  0.02%     -    1s
+
+Explored 1 nodes (7999 simplex iterations) in 1.51 seconds (1.05 work units)
+Thread count was 32 (of 80 available processors)
+
+Solution count 6: 10771.5 10771.5 123462 ... 162221
+
+Optimal solution found (tolerance 3.00e-03)
+Best objective 1.077150717395e+04, best bound 1.076896782970e+04, gap 0.0236%
+
+User-callback calls 1319, time in user-callback 0.00 sec
