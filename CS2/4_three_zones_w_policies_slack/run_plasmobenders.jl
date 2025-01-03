@@ -33,7 +33,7 @@ set_to_node_objectives(graph)
 set_optimizer(graph, Gurobi.Optimizer)
 #optimize!(graph)
 
-BendersAlg = BendersAlgorithm(graph, get_nodes(graph)[1],
+BendersAlg = BendersAlgorithm(graph, local_nodes(graph)[1],
     regularize = false,
     multicut = true,
     parallelize_benders = true,
@@ -54,7 +54,7 @@ CSV.write((@__DIR__)*"/benders_no_regularization.csv", df)
 graph,linking_variables_maps = GenX.generate_graph_model(setup,inputs,solver, solver)
 
 @suppress_err begin
-    BendersAlg = BendersAlgorithm(graph, get_nodes(graph)[1],
+    BendersAlg = BendersAlgorithm(graph, local_nodes(graph)[1],
         regularize = true,
         multicut = true,
         parallelize_benders = true,
@@ -64,10 +64,10 @@ graph,linking_variables_maps = GenX.generate_graph_model(setup,inputs,solver, so
         warm_start = false,
     )
     run_algorithm!(BendersAlg)
-end
 
-df = DataFrame()
-df[!, "UB"] = BendersAlg.upper_bounds
-df[!, "LB"] = BendersAlg.lower_bounds
-df[!, "Time"] = BendersAlg.time_iterations
-CSV.write((@__DIR__)*"/benders_regularization.csv", df)
+    df = DataFrame()
+    df[!, "UB"] = BendersAlg.upper_bounds
+    df[!, "LB"] = BendersAlg.lower_bounds
+    df[!, "Time"] = BendersAlg.time_iterations
+    CSV.write((@__DIR__)*"/benders_regularization.csv", df)
+end
