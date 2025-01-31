@@ -37,7 +37,7 @@ network_formulation = "StandardPTDFModel" # Network model to use
 output_dir = (@__DIR__)*"/5bus_sims/90d_3sp_G2" # Where to put the output directory
 
 # Define solver to use
-solver = optimizer_with_attributes(Gurobi.Optimizer, "MIPGap" => 1e-3, "TimeLimit" => 172000, "OutputFlag" => 0)
+solver = optimizer_with_attributes(Gurobi.Optimizer, "MIPGap" => 1e-5, "TimeLimit" => 172000, "OutputFlag" => 0)
 
 # Build the output directory if it is not there
 if !ispath(output_dir)
