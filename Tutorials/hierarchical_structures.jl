@@ -39,8 +39,8 @@ g23 = build_graph(); g24 = build_graph();
             
 # Add lower-level subgraphs to mid-level
 add_subgraph!(g1, g11); add_subgraph!(g1, g12);
-add_subgraph!(g2, g21); add_subgraph!(g1, g22);
-add_subgraph!(g2, g23); add_subgraph!(g1, g24);
+add_subgraph!(g2, g21); add_subgraph!(g2, g22);
+add_subgraph!(g2, g23); add_subgraph!(g2, g24);
             
 # Define link constraints between lower-level subgraphs;
 # these constraints are "owned" by the mid-level graphs
